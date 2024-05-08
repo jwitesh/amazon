@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zomato Cart</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToZLDBxd-kCYH6vrkqVhG51VYhfJHXmUNV0Q&s'); 
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center; /* Center the background image */
+  }
+
+  .cart {
+    border: 2px solid #ddd; /* Increased border thickness */
+    border-radius: 10px; /* Increased border radius */
+    padding: 30px; /* Increased padding */
+    margin: 50px auto; /* Increased margin for better centering */
+    max-width: 900px; /* Increased max-width for better layout */
+    display: flex; /* Adjusted layout to display items and cart side by side */
+    background-color: rgba(255, 255, 255, 0.9); /* Added background color with slightly brighter transparency */
+  }
+
+  .cart-left,
+  .cart-right {
+    padding: 20px; /* Added padding for better spacing */
+  }
+
+  .cart-left {
+    flex: 1; /* Added to take 1/3 of the available space */
+  }
+
+  .cart-right {
+    flex: 2; /* Added to take 2/3 of the available space */
+  }
+
+  .cart h2 {
+    font-size: 28px; /* Increased font size for cart title */
+    margin-bottom: 20px; /* Increased margin bottom for better spacing */
+    padding-left: 50px; /* Adjusted padding for the logo */
+    background-image: url('zomato_logo.png');
+    background-size: 50px; /* Adjusted the size of the logo */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: #555; /* Changed font color to a brighter shade */
+  }
+
+  .cart-items,
+  .selected-items {
+    border-bottom: 2px solid #ddd; /* Increased border thickness */
+    padding-bottom: 20px; /* Increased padding for better spacing */
+  }
+
+  .cart-item {
+    margin-bottom: 20px; 
+    display: flex; 
+    align-items: center; 
+  }
+
+  .cart-item-image {
+    width: 60px; 
+    height: 60px; 
+    margin-right: 15px; 
+  }
+
+  .cart-item-name {
+    font-weight: bold;
+  }
+
+  .cart-item-price {
+    color: #888;
+  }
+
+  .cart-total {
+    margin-top: 20px; 
+    font-size: 20px; 
+    font-weight: bold;
+  }
+
+  .cart-total p {
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="cart">
+  <div class="cart-left">
+    <h2>Cart</h2>
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="https://b.zmtcdn.com/data/pictures/7/18697107/14805d09420cc46017245a5e34ba6290.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*" alt="Item 1" class="cart-item-image">
+        <div>
+          <p class="cart-item-name">biriyani</p>
+          <p class="cart-item-price">$280.00</p>
+        </div>
+      </div>
+      <div class="cart-item">
+        <img src="https://b.zmtcdn.com/data/dish_photos/d90/dc79824db08a7684818c3f5d4aa0cd90.jpg?fit=around|130:130&crop=130:130;*,*" alt="Item 2" class="cart-item-image">
+        <div>
+          <p class="cart-item-name">palak paneer</p>
+          <p class="cart-item-price">$180.00</p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="cart-total">
+      <p>Total: <span id="total-price">$460.00</span></p>
+    </div>
+  </div>
+  <div class="cart-right">
+    <h2>Selected Items</h2>
+    <div class="selected-items">
+      <div class="selected-item">
+        <img src="https://b.zmtcdn.com/data/pictures/7/18697107/14805d09420cc46017245a5e34ba6290.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*" alt="Item 1" class="cart-item-image">
+        <div>
+          <p class="cart-item-name">biriyani</p>
+          <p class="cart-item-price">$280.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

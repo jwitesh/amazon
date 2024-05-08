@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Cart</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-image: url('amazon_background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            position: relative; /* Added position relative for positioning */
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header img {
+            width: 200px;
+        }
+        .cart-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            justify-items: center;
+        }
+        .product {
+            background-color: #ffffff; /* White product background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for products */
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease; /* Smooth transition on hover */
+        }
+        .product:hover {
+            transform: translateY(-5px); /* Move up slightly on hover */
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px; /* Rounded corners for images */
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for images */
+        }
+        .product h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333; /* Dark text color */
+        }
+        .product p {
+            margin: 0;
+            font-size: 18px;
+            color: #888; /* Light text color */
+        }
+
+        /* Order Summary Sidebar */
+        .order-summary {
+            background-color: #f9f9f9; /* Light gray background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for order summary */
+            position: absolute; /* Changed position to absolute */
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 300px;
+        }
+        .order-summary h2 {
+            margin-top: 0;
+        }
+        .order-summary-item {
+            margin-bottom: 10px;
+        }
+        .order-summary-total {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .delivery-address {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9; /* Light gray background */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for delivery address */
+        }
+        /* Promotional Banner */
+        .promotional-banner {
+            background-color: #f5a623; /* Yellow background */
+            color: #fff; /* White text color */
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* Recommended Products */
+        .recommended-products {
+            display:flex;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for recommended products */
+        }
+        .recommended-products h2 {
+            margin-top: 0;
+        }
+        .recommended-products .product {
+            margin-bottom: 20px;
+        }
+        .recommended-products .product:last-child {
+            margin-bottom: 0;
+        }
+        .product img{
+            width: 80%;
+            border-radius: 0%;
+            box-shadow:black;
+        }
+        .recommended-products img{
+            width:40%;
+            height: 100px;
+        }
+
+
+        /* Progress Indicator */
+        .progress-indicator {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for progress indicator */
+        }
+        .progress-indicator h2 {
+            margin-top: 0;
+        }
+        .progress-indicator .step {
+            margin-bottom: 10px;
+        }
+        .progress-indicator .step:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+        </div>
+        <div class="cart-item">
+            <!-- Cart item goes here -->
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81MRU+3RJLL._AC_UY327_FMwebp_QL65_.jpg" alt="Product 1">
+                <h3>Sony Bravia 139 cm (55 inches) 4K Ultra HD Smart LED Google TV KD-55X74L (Black)</h3>
+                <p>$57,990</p>
+            </div>
+        </div>
+
+        <div class="delivery-address">
+            <!-- Delivery address form goes here -->
+            <h2>delivering-address </h2>
+            <p> jwitesh konduru -9182465856<br/>
+                 13/169 2 line bantmuil road <br/>
+            back side of simhachailam hosptial<br/>
+            gudivada-521301 <br/>
+            krishna disrict <br/>
+            Andhra pradesh 
+            </p>
+
+        </div>
+       
+        <div class="promotional-banner">
+            <!-- Promotional banner goes here -->
+            <p>Get free shipping on orders over $50!</p>
+        </div>
+        <div class="recommended-products">
+            <!-- Recommended products go here -->
+            <h2>Recommended Products</h2><br/> 
+            
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/51X1axWGFZL._AC_SY145_.jpg" alt="Recommended Product 1">
+                <h3>Recommended Product 1</h3>
+                <p>$49.99</p>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71nMx5PxibL._AC_SY145_.jpg" alt="Recommended Product 2">
+                <h3>Recommended Product 2</h3>
+                <p>$59.99</p>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81BTRVfsuFL._AC_SY145_.jpg" alt="Recommended Product 3">
+                <h3>Recommended Product 3</h3>
+                <p>$69.99</p>
+            </div>
+        </div>
+        <div class="progress-indicator">
+            <!-- Progress indicator goes here -->
+            <h2>Progress Indicator</h2>
+            <div class="step">Step 1: packing from samsung show room at hyderbad</div>
+            <div class="step">Step 2: started from hyderbad</div>
+            <div class="step">Step 3: arriverd vijawada</div>
+            <div class="step">Step 4: arrived gudivada</div>
+            <div class="step">step 5: delivering to the given adderes</div>
+        </div>
+    </div>
+</body>
+</html>
